@@ -30,6 +30,17 @@
 <button id="howBtn" class="btn ghost">Como Jogar</button>
 </div>
 </div>
+
+<!-- Quiz Modal -->
+<div class="overlay hidden" id="quizModal">
+	<div class="box">
+		<h2 id="quizQuestion">Pergunta</h2>
+		<div id="quizOptions" class="quiz-options"></div>
+		<div style="margin-top:12px; display:flex; gap:8px; justify-content:center;">
+			<button id="skipQuiz" class="btn ghost small">Pular</button>
+		</div>
+	</div>
+</div>
 </div>
 
 
@@ -37,9 +48,9 @@
 <div class="panel card">
 <strong>Placar</strong>
 <div class="stats">
-<div class="stat"><div>Score</div><div id="score">0</div></div>
-<div class="stat"><div>Vidas</div><div id="lives">3</div></div>
-<div class="stat"><div>Tempo</div><div id="time">60</div></div>
+	<div class="stat"><div>Score</div><div id="score">0</div></div>
+	<div class="stat"><div>Vidas</div><div id="lives">3</div></div>
+	<div class="stat"><div>Tempo</div><div id="time">60</div></div>
 </div>
 
 
@@ -49,9 +60,9 @@
 </div>
 
 
-<div class="controls">
-<button id="pauseBtn" class="btn small">Pausar</button>
-<button id="resetBtn" class="btn small ghost">Reiniciar</button>
+	<div class="controls">
+	<button id="pauseBtn" class="btn small">Pausar</button>
+	<button id="resetBtn" class="btn small ghost">Reiniciar</button>
 </div>
 </div>
 
@@ -64,6 +75,8 @@
 <li>Itens saudáveis coletados: <span id="rGood">—</span></li>
 <li>Itens prejudiciais evitados: <span id="rBad">—</span></li>
 <li>Nível alcançado: <span id="rLevel">—</span></li>
+<li>Perguntas respondidas: <span id="rQuizTotal">—</span></li>
+<li>Perguntas corretas: <span id="rQuizCorrect">—</span></li>
 </ul>
 </div>
 </aside>

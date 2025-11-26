@@ -1,6 +1,10 @@
 :root {
-
-
+	--cp-blue: #005bab;
+	--cp-green: #2ecc71;
+	--cp-red: #e74c3c;
+	--muted: #6b7280;
+	--text: #0f172a;
+}
 .meter {
 height: 10px;
 width: 100%;
@@ -38,6 +42,8 @@ border: 2px solid var(--cp-blue);
 color: var(--cp-blue);
 }
 
+.btn.active { background: var(--cp-green); color: #fff; border-color: var(--cp-green); }
+
 
 .small {
 padding: 6px 10px;
@@ -69,6 +75,13 @@ max-width: 480px;
 padding: 20px;
 }
 
+/* quiz modal specific */
+.overlay.hidden { display: none; }
+.quiz-options { display: grid; gap: 8px; margin-top: 8px; }
+.quiz-options button { text-align: left; padding: 10px 12px; border-radius: 8px; font-weight: 600; }
+.quiz-options button.correct { background: var(--cp-green); color: white; border: none; }
+.quiz-options button.wrong { background: var(--cp-red); color: white; border: none; }
+
 
 /* MINI RELATÓRIO */
 .report {
@@ -99,4 +112,6 @@ color: var(--muted);
  .game-area {
  grid-template-columns: 1fr;
  } } 
-}
+
+
+ 
