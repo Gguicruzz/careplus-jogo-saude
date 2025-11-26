@@ -1,38 +1,108 @@
-# Care Plus — Jogo Interativo de Saúde
+README — Jogo Interativo de Saúde (Care Plus)
+Trabalho Acadêmico – 1-ESPR
 
-Este projeto é um jogo educativo desenvolvido para demonstrar conceitos de saúde e bem‑estar de forma interativa, seguindo a identidade visual da **Care Plus**.
+Aluno: Guilherme Cruz Alves
 
-## 🎮 Funcionalidades
-- Capturar itens saudáveis e evitar itens prejudiciais.
-- Sistema de pontuação, vidas e barra de saúde.
-- Mini-relatório final com:
-  - Score total
-  - Itens saudáveis coletados
-  - Itens prejudiciais evitados
-  - Nível alcançado
-- Tema visual totalmente inspirado na Care Plus.
-- Totalmente responsivo e compatível com navegadores modernos.
+🎯 Objetivo do Projeto
 
-## 📁 Estrutura do Projeto
-```
+Este projeto foi desenvolvido como parte das atividades acadêmicas da turma 1-ESPR, com foco em criar uma aplicação interativa que promova a saúde e o bem-estar utilizando conceitos de desenvolvimento web.
+
+O tema foi inspirado na empresa Care Plus, integrando elementos visuais e educacionais que reforçam a importância de hábitos saudáveis no cotidiano.
+
+🎮 Sobre o Jogo
+
+O jogo simula uma coleta de hábitos saudáveis, incentivando o jogador a:
+
+✅ Coletar itens benéficos, como alimentos saudáveis e práticas de exercício
+❌ Evitar itens prejudiciais, como junk food e sedentarismo
+
+Ao final da partida, o usuário recebe um mini-relatório contendo:
+
+Pontuação final
+
+Quantidade de itens saudáveis coletados
+
+Itens prejudiciais evitados
+
+Indicadores gerais de desempenho
+
+🧠 Aprendizados Envolvidos
+
+Durante o desenvolvimento deste projeto, foram trabalhados diversos conceitos fundamentais:
+
+HTML5
+
+Estruturação semântica de páginas
+
+Hierarquia de elementos e organização visual
+
+CSS3
+
+Responsividade
+
+Layouts modernos
+
+Tematização customizada inspirada na marca Care Plus
+
+Uso de variáveis, sombras, gradientes e UI clean
+
+JavaScript (Vanilla JS)
+
+Manipulação de canvas (<canvas>)
+
+Loops de animação (requestAnimationFrame)
+
+Lógica de colisão
+
+Controles por teclado
+
+Atualização dinâmica do DOM
+
+Sistema de pontuação e estado de jogo
+
+🧩 Estrutura do Projeto
 /careplus-jogo
- ├── index.html
- ├── style.css
- ├── script.js
- └── README.md
-```
+ ├── index.html       # Estrutura principal da página e do jogo
+ ├── style.css        # Estilos visuais (tema Care Plus)
+ ├── script.js        # Lógica completa do jogo
+ └── README.md        # Documentação do projeto
 
-## 🚀 Como Executar
-1. Baixe o arquivo ZIP.
-2. Extraia os arquivos.
-3. Abra o arquivo **index.html** em qualquer navegador.
+🚀 Como Executar o Jogo
 
-Não requer servidor ou instalação.
+Baixe o projeto completo (ZIP).
 
-## 👨‍💻 Tecnologias
-- HTML5
-- CSS3
-- JavaScript puro (Vanilla JS)
+Extraia os arquivos em uma pasta.
 
-## 🏢 Desenvolvido para
-**Care Plus — Saúde e Bem‑Estar**
+Abra index.html em qualquer navegador moderno.
+
+Não é necessário instalar nada ou usar servidor — funciona 100% offline.
+
+🕹️ Como Jogar
+
+Use as setas do teclado para mover a cesta.
+
+Colete itens saudáveis para ganhar pontos.
+
+Evite itens prejudiciais que reduzem sua energia.
+
+Acompanhe seu relatório ao final da partida.
+
+🏢 Contexto Temático: Care Plus
+
+A estética e o conceito do jogo foram inspirados na Care Plus, empresa reconhecida pela promoção de saúde integral.
+
+Sua identidade visual foi reinterpretada com:
+🎨 Cores institucionais
+💙 Interface clean
+📈 Incentivo à qualidade de vida
+
+👨‍🎓 Autor
+
+Guilherme Cruz Alves
+Turma: 1-ESPR
+Projeto acadêmico — Desenvolvimento Web
+
+✔️ Licença / Observações
+
+Este projeto foi desenvolvido exclusivamente para fins educacionais e apresentação acadêmica.
+Todos os elementos gráficos utilizados são simbólicos e representativos.
