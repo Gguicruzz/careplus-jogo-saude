@@ -1,0 +1,102 @@
+:root {
+
+
+.meter {
+height: 10px;
+width: 100%;
+background: #dceaf8;
+border-radius: 6px;
+overflow: hidden;
+margin-top: 6px;
+}
+
+
+.meter b {
+display: block;
+height: 100%;
+background: var(--cp-green);
+width: 0%;
+transition: width 0.25s;
+}
+
+
+/* BUTTONS */
+.btn {
+padding: 8px 14px;
+border-radius: 8px;
+border: none;
+cursor: pointer;
+background: var(--cp-blue);
+color: #fff;
+font-weight: 600;
+}
+
+
+.btn.ghost {
+background: transparent;
+border: 2px solid var(--cp-blue);
+color: var(--cp-blue);
+}
+
+
+.small {
+padding: 6px 10px;
+font-size: 14px;
+}
+
+
+.controls {
+display: flex;
+gap: 8px;
+margin-top: 10px;
+}
+
+
+/* OVERLAY */
+.overlay {
+position: absolute;
+inset: 0;
+background: rgba(255, 255, 255, 0.85);
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+
+.overlay .box {
+text-align: center;
+max-width: 480px;
+padding: 20px;
+}
+
+
+/* MINI RELATÓRIO */
+.report {
+margin-top: 8px;
+padding-left: 16px;
+color: var(--muted);
+}
+
+
+.report span {
+font-weight: 700;
+color: var(--text);
+}
+
+
+/* FOOTER */
+.cp-footer {
+text-align: center;
+margin-top: 20px;
+font-size: 13px;
+color: var(--muted);
+}
+
+
+/* RESPONSIVO */
+
+ @media(max-width: 900px){
+ .game-area {
+ grid-template-columns: 1fr;
+ } } 
+}

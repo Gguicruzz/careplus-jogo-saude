@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Care Plus — Jogo de Saúde</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<div class="wrap">
+<header class="cp-header">
+<img src="logo.png" alt="Care Plus" class="logo" />
+<div>
+<h1>Care Plus — Jogo Interativo de Saúde</h1>
+<p class="sub">Colete hábitos saudáveis, evite itens nocivos e acompanhe seu mini‑relatório!</p>
+</div>
+</header>
+
+
+<div class="game-area">
+<div class="card stage" id="stage">
+<canvas id="playfield" width="800" height="460"></canvas>
+
+
+<div class="overlay" id="overlay">
+<div class="box">
+<h2>Bem‑vindo!</h2>
+<p>Movimente a cesta com as setas ou tocando na tela.</p>
+<button id="startBtn" class="btn">Iniciar</button>
+<button id="howBtn" class="btn ghost">Como Jogar</button>
+</div>
+</div>
+</div>
+
+
+<aside class="sidebar">
+<div class="panel card">
+<strong>Placar</strong>
+<div class="stats">
+<div class="stat"><div>Score</div><div id="score">0</div></div>
+<div class="stat"><div>Vidas</div><div id="lives">3</div></div>
+<div class="stat"><div>Tempo</div><div id="time">60</div></div>
+</div>
+
+
+<div class="health">
+<div class="label">Saúde</div>
+<div class="meter"><b id="healthBar"></b></div>
+</div>
+
+
+<div class="controls">
+<button id="pauseBtn" class="btn small">Pausar</button>
+<button id="resetBtn" class="btn small ghost">Reiniciar</button>
+</div>
+</div>
+
+
+<div class="panel card">
+<strong>Mini‑Relatório</strong>
+<p class="muted">Última partida:</p>
+<ul class="report">
+<li>Score final: <span id="rScore">—</span></li>
+<li>Itens saudáveis coletados: <span id="rGood">—</span></li>
+<li>Itens prejudiciais evitados: <span id="rBad">—</span></li>
+<li>Nível alcançado: <span id="rLevel">—</span></li>
+</ul>
+</div>
+</aside>
+</div>
+
+
+<footer class="cp-footer">Care Plus — Promoção de saúde e bem‑estar</footer>
+</div>
+
+
+<script src="script.js"></script>
+</body>
+</html>
