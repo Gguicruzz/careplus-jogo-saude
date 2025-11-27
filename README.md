@@ -9,22 +9,15 @@ Este projeto foi desenvolvido como parte das atividades acadêmicas da turma 1-E
 
 O tema foi inspirado na empresa Care Plus, integrando elementos visuais e educacionais que reforçam a importância de hábitos saudáveis no cotidiano.
 
-🎮 Sobre o Jogo
+🎯 Sobre o Quiz
 
-O jogo simula uma coleta de hábitos saudáveis, incentivando o jogador a:
+Esta versão concentra-se em um Quiz interativo que promove hábitos saudáveis.
 
-✅ Coletar itens benéficos, como alimentos saudáveis e práticas de exercício
-❌ Evitar itens prejudiciais, como junk food e sedentarismo
+Responda perguntas relacionadas à saúde e receba um mini-relatório ao final da sessão com:
 
-Ao final da partida, o usuário recebe um mini-relatório contendo:
-
-Pontuação final
-
-Quantidade de itens saudáveis coletados
-
-Itens prejudiciais evitados
-
-Indicadores gerais de desempenho
+- Pontuação (acertos)
+- Número de perguntas respondidas
+- Número de acertos totais
 
 🧠 Aprendizados Envolvidos
 
@@ -62,9 +55,10 @@ Sistema de pontuação e estado de jogo
 
 🧩 Estrutura do Projeto
 /careplus-jogo
- ├── index.html       # Estrutura principal da página e do jogo
- ├── style.css        # Estilos visuais (tema Care Plus)
- ├── script.js        # Lógica completa do jogo
+/careplus-jogo
+ ├── index.html       # Estrutura principal da página (quiz)
+ ├── style.css        # Estilos visuais
+ ├── quiz.js          # Lógica do quiz
  └── README.md        # Documentação do projeto
 
 🚀 Como Executar o Jogo

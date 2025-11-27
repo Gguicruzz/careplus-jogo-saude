@@ -11,7 +11,7 @@
 <header class="cp-header">
 <img src="logo.png" alt="Care Plus" class="logo" />
 <div>
-<h1>Care Plus — Jogo Interativo de Saúde</h1>
+<h1>Care Plus — Quiz Interativo de Saúde</h1>
 <p class="sub">Colete hábitos saudáveis, evite itens nocivos e acompanhe seu mini‑relatório!</p>
 </div>
 </header>
@@ -19,23 +19,26 @@
 
 <div class="game-area">
 <div class="card stage" id="stage">
-<canvas id="playfield" width="800" height="460"></canvas>
-
-
-<div class="overlay" id="overlay">
-<div class="box">
-<h2>Bem‑vindo!</h2>
-<p>Movimente a cesta com as setas ou tocando na tela.</p>
-<button id="startBtn" class="btn">Iniciar</button>
-<button id="howBtn" class="btn ghost">Como Jogar</button>
-</div>
-</div>
+		<canvas id="gameCanvas" class="game-canvas hidden" width="800" height="420" aria-hidden="true"></canvas>
+	<div class="overlay" id="overlay">
+		<div class="box">
+			<h2>Bem‑vindo ao Quiz!</h2>
+			<p>Aprenda sobre hábitos saudáveis respondendo perguntas simples. Toque em Iniciar para começar.</p>
+			<div style="display:flex; gap:8px; justify-content:center; margin-top: 12px;">
+				<button id="startBtn" class="btn primary large" aria-label="Iniciar jogo">Iniciar</button>
+				<button id="howBtn" class="btn ghost" aria-label="Como jogar">Como Jogar</button>
+				<button id="closeOverlayBtn" class="btn small ghost">Fechar</button>
+			</div>
+		</div>
+	</div>
 
 <!-- Quiz Modal -->
-<div class="overlay hidden" id="quizModal">
+<div class="overlay hidden" id="quizModal" role="dialog" aria-modal="true" aria-labelledby="quizQuestion">
 	<div class="box">
+		<div id="quizProgress" class="quiz-progress" aria-live="polite">Pergunta 0 / 0</div>
+		<div class="meter" aria-hidden="true"><b style="width:0%"></b></div>
 		<h2 id="quizQuestion">Pergunta</h2>
-		<div id="quizOptions" class="quiz-options"></div>
+		<div id="quizOptions" class="quiz-options" role="list"></div>
 		<div style="margin-top:12px; display:flex; gap:8px; justify-content:center;">
 			<button id="skipQuiz" class="btn ghost small">Pular</button>
 		</div>
@@ -45,40 +48,32 @@
 
 
 <aside class="sidebar">
-<div class="panel card">
-<strong>Placar</strong>
-<div class="stats">
-	<div class="stat"><div>Score</div><div id="score">0</div></div>
-	<div class="stat"><div>Vidas</div><div id="lives">3</div></div>
-	<div class="stat"><div>Tempo</div><div id="time">60</div></div>
-</div>
+	<div class="panel card">
+		<strong>Placar</strong>
+		<div class="stats">
+			<div class="stat"><div>Score</div><div id="score">0</div></div>
+			<div class="stat"><div>Perguntas</div><div id="rQuizTotal">0</div></div>
+			<div class="stat"><div>Streak</div><div id="rStreak">0</div></div>
+			<div class="stat"><div>Acertos</div><div id="rQuizCorrect">0</div></div>
+			<div class="stat"><div>Errados</div><div id="rWrong">0</div></div>
+		</div>
+		<div class="controls">
+			<button id="toggleSound" class="btn small ghost" aria-pressed="true">Som: ligado</button>
+			<button id="toggleView" class="btn small ghost" aria-pressed="false">Modo Jogo</button>
+			<button id="resetBtn" class="btn small ghost">Reiniciar</button>
+		</div>
+	</div>
 
-
-<div class="health">
-<div class="label">Saúde</div>
-<div class="meter"><b id="healthBar"></b></div>
-</div>
-
-
-	<div class="controls">
-	<button id="pauseBtn" class="btn small">Pausar</button>
-	<button id="resetBtn" class="btn small ghost">Reiniciar</button>
-</div>
-</div>
-
-
-<div class="panel card">
-<strong>Mini‑Relatório</strong>
-<p class="muted">Última partida:</p>
-<ul class="report">
-<li>Score final: <span id="rScore">—</span></li>
-<li>Itens saudáveis coletados: <span id="rGood">—</span></li>
-<li>Itens prejudiciais evitados: <span id="rBad">—</span></li>
-<li>Nível alcançado: <span id="rLevel">—</span></li>
-<li>Perguntas respondidas: <span id="rQuizTotal">—</span></li>
-<li>Perguntas corretas: <span id="rQuizCorrect">—</span></li>
-</ul>
-</div>
+	<div class="panel card">
+		<strong>Mini‑Relatório</strong>
+		<p class="muted">Última sessão:</p>
+			<ul class="report">
+				<li>Score final: <span id="rReportScore">—</span></li>
+				<li>Perguntas respondidas: <span id="rReportTotal">—</span></li>
+				<li>Perguntas corretas: <span id="rReportCorrect">—</span></li>
+				<li>Perguntas erradas: <span id="rReportWrong">—</span></li>
+			</ul>
+	</div>
 </aside>
 </div>
 
@@ -87,6 +82,6 @@
 </div>
 
 
-<script src="script.js"></script>
+<script src="quiz.js"></script>
 </body>
 </html>
